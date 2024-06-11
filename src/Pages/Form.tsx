@@ -1,4 +1,3 @@
-// src/Pages/Form.tsx
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -51,6 +50,7 @@ export default function Form() {
     const navigate = useNavigate();
 
     const onSubmit = (data: FormData) => {
+        console.log(data);
         setFormData(data);
         navigate('/card');
     };
