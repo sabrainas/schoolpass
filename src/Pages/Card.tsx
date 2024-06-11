@@ -19,12 +19,12 @@ export default function Card() {
     <div>
       <Header />
       <div className="py-2">
-        <h2 className="text-center text-[#10316b] font-semibold text-2xl border border-b-zinc-300 pb-2">Carteira de Identificação Estudantil</h2>
+        <h2 className="text-center text-[#10316b] font-semibold text-2xl border border-b-zinc-300 pb-2">Documento de Identificação Estudantil</h2>
         <div className="flex my-10 items-center justify-center gap-5">
           <div>
             <img src="/img/default-image.jpg" alt="" />
           </div>
-          <div className="border-2 border-r-yellow-500 pr-3">
+          <div className="border-r-2 border-r-yellow-500 pr-3">
             <span className="font-bold text-[#10316b]">NOME </span>
             <p className="font-medium pb-2">{formData.name} {formData.lastName}</p>
 
