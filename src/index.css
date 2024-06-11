@@ -19,3 +19,8 @@ code {
 label{
   font-weight: 500;
 }
+
+::selection{
+  background-color: rgb(234 179 8);
+  color: white;
+}
