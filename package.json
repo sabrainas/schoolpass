@@ -2,8 +2,9 @@
   "name": "schoolpass",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sabrainas.github.io/schoolpass/",
+  "homepage": "https://sabrainas.github.io/schoolpass",
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@hookform/resolvers": "^3.6.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

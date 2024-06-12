@@ -28,7 +28,7 @@ export default function Card() {
         <h2 className="text-center text-[#10316b] font-semibold text-2xl border border-b-zinc-300 pb-2">Documento de Identificação Estudantil</h2>
         <div className="flex my-10 items-center justify-center gap-5">
           <div>
-            <img src="/img/default-image.jpg" alt="" />
+            <img src={`${process.env.PUBLIC_URL}/img/default-image.jpg`} alt="" />
           </div>
           <div className="border-r-2 border-r-yellow-500 pr-3">
             <span className="font-bold text-[#10316b]">NOME </span>
