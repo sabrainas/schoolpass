@@ -15,7 +15,7 @@ export default function Card() {
 
     return (
         <div className='flex justify-center'>
-            <div className='border-2 border-yellow-500 rounded-lg w-[35rem]'>
+            <div className='border-2 border-yellow-500 rounded-lg md:w-[35rem] w-[25rem]'>
                 <div className='flex w-full justify-center items-center m-auto p-5 bg-[#10316b] rounded-tl-lg rounded-tr-lg'>
                     <img src={`${process.env.PUBLIC_URL}/img/logo-sem-fundo.png`} width={60} alt="" />
                     <p className='font-semibold text-xl text-yellow-500'>SchoolPass</p>
@@ -27,19 +27,19 @@ export default function Card() {
                     </div>
 
                     <div className="text-[#10316b]">
-                        <p className="font-semibold pb-2 uppercase">{formData.name} {formData.lastName}</p>
+                        <p className="font-semibold pb-2 uppercase md:text-base text-sm">{formData.name} {formData.lastName}</p>
 
-                        <p className="font-semibold pb-2 uppercase ">{formData.nameCollege}</p>
+                        <p className="font-semibold pb-2 uppercase md:text-base text-sm">{formData.nameCollege}</p>
 
-                        <p className="font-semibold pb-2 uppercase">{formData.course}</p>
+                        <p className="font-semibold pb-2 uppercase md:text-base text-sm">{formData.course}</p>
 
-                        <p className="font-semibold pb-2">{formData.cpf}</p>
+                        <p className="font-semibold pb-2 md:text-base text-sm">{formData.cpf}</p>
 
-                        <p className="font-semibold pb-2">{formatDate(formData.birthday)}</p>
+                        <p className="font-semibold pb-2 md:text-base text-sm">{formatDate(formData.birthday)}</p>
 
-                        <p className="font-semibold pb-2">{formData.rg}</p>
+                        <p className="font-semibold pb-2 md:text-base text-sm">{formData.rg}</p>
 
-                        <p className="font-semibold">VALIDADE: {formatDate(formData.end)}</p>
+                        <p className="font-semibold md:text-base text-sm">VALIDADE: {formatDate(formData.end)}</p>
                     </div>
                 </div>
             </div>
