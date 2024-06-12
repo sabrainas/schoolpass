@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import { useFormData } from '../Context/FormDataContext';
 
 export default function Card() {
@@ -6,6 +7,11 @@ export default function Card() {
     if (!formData) {
         return <div>Nenhum dado disponível</div>;
     }
+
+    const formatDate = (dateString:string) => {
+        const date = new Date(dateString);
+        return format(date, 'dd/MM/yyyy');
+    };
 
     return (
         <div className='flex justify-center'>
@@ -29,11 +35,11 @@ export default function Card() {
 
                         <p className="font-semibold pb-2">{formData.cpf}</p>
 
-                        <p className="font-semibold pb-2">{formData.birthday}</p>
+                        <p className="font-semibold pb-2">{formatDate(formData.birthday)}</p>
 
                         <p className="font-semibold pb-2">{formData.rg}</p>
 
-                        <p className="font-semibold">VALIDADE: {formData.end}</p>
+                        <p className="font-semibold">VALIDADE: {formatDate(formData.end)}</p>
                     </div>
                 </div>
             </div>

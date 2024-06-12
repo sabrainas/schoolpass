@@ -3,6 +3,7 @@ import { useFormData } from "../Context/FormDataContext";
 import CardLayout from "../components/CardLayout";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
+import { format } from 'date-fns';
 
 export default function Card() {
   const { formData } = useFormData();
@@ -11,6 +12,11 @@ export default function Card() {
   if (!formData) {
     return <div>Nenhum dado disponível</div>;
   }
+
+  const formatDate = (dateString:string) => {
+    const date = new Date(dateString);
+    return format(date, 'dd/MM/yyyy');
+};
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -29,7 +35,7 @@ export default function Card() {
             <p className="font-medium pb-2">{formData.name} {formData.lastName}</p>
 
             <span className="font-bold text-[#10316b]">DATA DE NASCIMENTO </span>
-            <p className="font-medium pb-2">{formData.birthday}</p>
+            <p className="font-medium pb-2">{formatDate(formData.birthday)}</p>
 
             <span className="font-bold text-[#10316b]">CPF </span>
             <p className="font-medium pb-2">{formData.cpf}</p>
@@ -45,10 +51,10 @@ export default function Card() {
             <p className="font-medium pb-2">{formData.course}</p>
 
             <span className="font-bold text-[#10316b]">DATA DE INÍCIO </span>
-            <p className="font-medium pb-2">{formData.start}</p>
+            <p className="font-medium pb-2">{formatDate(formData.start)}</p>
 
             <span className="font-bold text-[#10316b]">DATA DE TÉRMINO </span>
-            <p className="font-medium pb-2">{formData.end}</p>
+            <p className="font-medium pb-2">{formatDate(formData.end)}</p>
           </div>
         </div>
         <div className="text-center mb-5">
