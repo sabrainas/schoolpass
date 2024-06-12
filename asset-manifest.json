@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/schoolpass/static/css/main.e4067778.css",
+    "main.js": "/schoolpass/static/js/main.ff7783dc.js",
+    "index.html": "/schoolpass/index.html",
+    "main.e4067778.css.map": "/schoolpass/static/css/main.e4067778.css.map",
+    "main.ff7783dc.js.map": "/schoolpass/static/js/main.ff7783dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4067778.css",
+    "static/js/main.ff7783dc.js"
+  ]
+}
